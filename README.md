@@ -1,11 +1,17 @@
 # 🏥 Sistema de Suporte ao Diagnóstico Cardiovascular
 ## Tech Challenge Fase 1 — Pós-Tech IA para Desenvolvedores
 
-**Equipe:** # Flamers Team 🔥  
 **Instituição:** Hospital Universitário (Simulação)  
 **Projeto:** IA para Triagem e Apoio à Decisão Médica em Doenças Circulatórias
 
 > 📄 **Desafio oficial:** [IADT - Fase 1 - Tech challenge B.pdf](IADT%20-%20Fase%201%20-%20Tech%20challenge%20B.pdf)
+
+### 👥 Equipe — Flamers Team 🔥
+* **Flávio Oscar Hahn** - RM 374132
+* **Larissa Gomes do Vale Cabrerisso Machado** - RM 370911
+* **Michelle Almeida Nogueira Rodrigues** - RM 372291
+* **Ramon Silva** - RM 373445
+* **Selvino Wilmar Rodrigues Junior** - RM 368570
 
 ---
 
@@ -37,15 +43,6 @@ Modelo de CNN para detecção automática de **retinopatia diabética** com dois
 ## 📺 Demonstração em Vídeo
 Assista à apresentação do projeto, metodologia e resultados:
 👉 **[Assistir no YouTube](https://www.youtube.com/watch?v=6l4sF38SXOM)**
-
----
-
-## 👥 Membros da Equipe
-* **Flávio Oscar Hahn** - RM 374132
-* **Larissa Gomes do Vale Cabrerisso Machado** - RM 370911
-* **Michelle Almeida Nogueira Rodrigues** - RM 372291
-* **Ramon Silva** - RM 373445
-* **Selvino Wilmar Rodrigues Junior** - RM 368570
 
 ---
 
