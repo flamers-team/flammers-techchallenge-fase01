@@ -13,8 +13,8 @@
 
 Este projeto foi desenvolvido como parte da Fase 1 da Pós-Tech em IA para Desenvolvedores. O objetivo é auxiliar médicos de um hospital universitário na análise inicial e triagem de pacientes com doenças do aparelho circulatório (CID-10: I00-I99), utilizando dados reais do DataSUS 2024.
 
-### 🎯 Notebook Principal
-**Entrega principal do desafio:** [📊 analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb)
+### 🎯 Sistema de Suporte ao Diagnóstico Cardiovascular
+**Notebook principal:** [📊 analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb)
 
 Contém:
 - ✅ Análise exploratória completa dos dados
@@ -27,7 +27,7 @@ O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de 
 
 ---
 
-### 🎁 Entrega Extra — Visão Computacional
+### 🎁 Entrega EXTRA - CNN - Retinopatia Diabética
 **Notebook adicional:** [🧠 CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb)
 
 Modelo de CNN para detecção automática de **retinopatia diabética** com dois modelos: CNN personalizada e Transfer Learning com EfficientNetB0. Esta é uma entrega extra do desafio que complementa a análise cardiovascular com visão computacional.
@@ -155,7 +155,7 @@ Para quem prefere rodar sem Docker.
 
 ---
 
-## 🧠 Atividade EXTRA - CNN  - Retinopatia Diabética
+## 🧠 Entrega EXTRA - CNN  - Retinopatia Diabética
 
 Modelo de CNN para **detecção automática de retinopatia diabética**
 
