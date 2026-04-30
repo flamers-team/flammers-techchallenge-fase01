@@ -25,8 +25,11 @@ RUN pip install --no-cache-dir \
     opencv-python-headless \
     tqdm
 
+# Pré-carrega workspace com os notebooks principais já abertos como abas
+COPY jupyter-workspace.json /root/.jupyter/lab/workspaces/default.jupyterlab-workspace
+
 # Expõe porta do Jupyter
 EXPOSE 8888
 
-# Inicia Jupyter Lab com acesso remoto permitido
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+# Inicia Jupyter Lab abrindo a workspace padrão (notebooks fixos como abas)
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--LabApp.default_url=/lab/workspaces/default"]
