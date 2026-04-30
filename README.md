@@ -39,10 +39,53 @@ O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de 
 
 ## 🚀 Como Executar o Projeto
 
-### Instalação
+### Pré-requisitos
+- Python 3.9+
+- Jupyter Notebook ou VS Code com extensão Jupyter
+- Bibliotecas Python (instaladas via pip ou conda)
+
+### Instalação e Setup
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/Flamers-Team/FLAMERSTEAM.git](https://github.com/Flamers-Team/FLAMERSTEAM.git)
+   git clone https://github.com/Flamers-Team/flammers-techchallenge-fase01.git
+   cd flammers-techchallenge-fase01
+   ```
+
+2. Crie um ambiente virtual (recomendado):
+   ```bash
+   python -m venv venv
+   # Windows
+   venv\Scripts\activate
+   # macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Executando os Notebooks
+
+#### 📊 Notebook Principal — Análise de Dados DataSUS
+Abra e execute o notebook principal:
+```bash
+jupyter notebook analiseDosDadosDATASUS.ipynb
+```
+
+- Este notebook contém todas as análises, preprocessamento, modelos e resultados.
+- Execute as células **sequencialmente** de cima para baixo.
+- Cada célula está documentada com explicações detalhadas do que está sendo feito.
+- O dataset utilizado está em [data/dataSUS.csv](data/dataSUS.csv).
+
+#### 🎁 Notebook Extra — CNN para Retinopatia Diabética
+Para a análise de Visão Computacional, execute:
+```bash
+jupyter notebook CNN_Retinopatia_Diabetica.ipynb
+```
+
+- Certifique-se de que o dataset de imagens foi extraído em `./data/diabetic_retinopathy/` (confira as instruções dentro do notebook).
+- Execute as células sequencialmente para treinar e avaliar os modelos de CNN
    
 
 ---
