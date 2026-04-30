@@ -25,7 +25,6 @@ Contém:
 
 O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de internação em UTI**, permitindo que a equipe clínica priorize casos críticos e otimize o tempo de resposta hospitalar.
 
----
 
 ### 🎁 Entrega Extra — Visão Computacional
 **Notebook adicional:** [🧠 CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb)
