@@ -121,6 +121,24 @@ Se preferir uma abordagem containerizada, você pode usar Docker e Docker Compos
 
 **Nota:** Os volumes estão mapeados, então qualquer alteração nos notebooks será persistida no seu sistema de arquivos local.
 
+#### 🐳 Usar imagem publicada do GitHub Container Registry (GHCR)
+
+A imagem Docker é automaticamente compilada e publicada no GitHub Container Registry por uma esteira CI/CD a cada push em `main`.
+
+**Pull da imagem:**
+```bash
+docker pull ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
+```
+
+**Rodar container direto:**
+```bash
+docker run -it -p 8888:8888 \
+  -v $(pwd):/workspace \
+  ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
+```
+
+Então acesse http://localhost:8888 no navegador.
+
 ---
 
 ## 🎁 Entrega Extra — Visão Computacional
