@@ -86,7 +86,40 @@ jupyter notebook CNN_Retinopatia_Diabetica.ipynb
 
 - Certifique-se de que o dataset de imagens foi extraído em `./data/diabetic_retinopathy/` (confira as instruções dentro do notebook).
 - Execute as células sequencialmente para treinar e avaliar os modelos de CNN
-   
+
+### 🐳 Alternativa: Executar com Docker
+
+Se preferir uma abordagem containerizada, você pode usar Docker e Docker Compose para rodar todo o ambiente sem dependências locais.
+
+#### Pré-requisitos
+- Docker instalado
+- Docker Compose instalado
+
+#### Build e Execução
+1. Build da imagem:
+   ```bash
+   docker-compose build
+   ```
+
+2. Inicie o container:
+   ```bash
+   docker-compose up
+   ```
+
+3. Acesse o Jupyter Lab:
+   - Abra o navegador em: http://localhost:8888
+   - Copie o token exibido no terminal e cole na página de login, se solicitado.
+
+4. Dentro do Jupyter Lab, navegue até os notebooks:
+   - [analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb) — Notebook principal
+   - [CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb) — Notebook extra
+
+5. Para parar o container:
+   ```bash
+   docker-compose down
+   ```
+
+**Nota:** Os volumes estão mapeados, então qualquer alteração nos notebooks será persistida no seu sistema de arquivos local.
 
 ---
 
