@@ -9,6 +9,31 @@
 
 ---
 
+## � Sobre o Projeto (Entrega Principal)
+
+Este projeto foi desenvolvido como parte da Fase 1 da Pós-Tech em IA para Desenvolvedores. O objetivo é auxiliar médicos de um hospital universitário na análise inicial e triagem de pacientes com doenças do aparelho circulatório (CID-10: I00-I99), utilizando dados reais do DataSUS 2024.
+
+### 🎯 Notebook Principal
+**Entrega principal do desafio:** [📊 analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb)
+
+Contém:
+- ✅ Análise exploratória completa dos dados
+- ✅ Estratégias de pré-processamento
+- ✅ Modelos de Machine Learning (Decision Tree, Random Forest)
+- ✅ Avaliação com métricas clínicas (Confusion Matrix, ROC-AUC)
+- ✅ Insights e interpretações dos resultados
+
+O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de internação em UTI**, permitindo que a equipe clínica priorize casos críticos e otimize o tempo de resposta hospitalar.
+
+---
+
+### 🎁 Entrega Extra — Visão Computacional
+**Notebook adicional:** [🧠 CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb)
+
+Modelo de CNN para detecção automática de **retinopatia diabética** com dois modelos: CNN personalizada e Transfer Learning com EfficientNetB0. Esta é uma entrega extra do desafio que complementa a análise cardiovascular com visão computacional.
+
+---
+
 ## 📺 Demonstração em Vídeo
 Assista à apresentação do projeto, metodologia e resultados:
 👉 **[Link para o Vídeo no YouTube/Vimeo](#)** *(https://www.youtube.com/watch?v=6l4sF38SXOM)*
@@ -21,15 +46,6 @@ Assista à apresentação do projeto, metodologia e resultados:
 * **Michelle Almeida Nogueira Rodrigues** - RM 372291
 * **Ramon Silva** - RM 373445
 * **Selvino Wilmar Rodrigues Junior** - RM 368570
-
----
-
-## 📋 Sobre o Projeto
-Este projeto foi desenvolvido como parte da Fase 1 da Pós-Tech em IA para Desenvolvedores. O objetivo é auxiliar médicos de um hospital universitário na análise inicial e triagem de pacientes com doenças do aparelho circulatório (CID-10: I00-I99), utilizando dados reais do DataSUS 2024.
-
-Notebook principal de trabalho (entrega principal): [analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb).
-
-O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de internação em UTI**, permitindo que a equipe clínica priorize casos críticos e otimize o tempo de resposta hospitalar.
 
 ---
 
@@ -141,11 +157,9 @@ Então acesse http://localhost:8888 no navegador.
 
 ---
 
-## 🎁 Entrega Extra — Visão Computacional
+## 🧠 Documentação da CNN — Retinopatia Diabética
 
-# Detecção de Retinopatia Diabética com CNN
-
-Notebook da entrega extra: [CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb).
+Modelo de CNN para **detecção automática de retinopatia diabética**
 
 Modelo de CNN para **detecção automática de retinopatia diabética** a partir de fotografias do fundo de olho (fundoscopia retiniana). O projeto treina e compara dois modelos: uma CNN construída do zero e Transfer Learning com EfficientNetB0.
 
