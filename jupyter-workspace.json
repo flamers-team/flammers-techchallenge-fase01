@@ -1,0 +1,56 @@
+{
+  "data": {
+    "layout-restorer:data": {
+      "main": {
+        "dock": {
+          "type": "tab-area",
+          "currentIndex": 0,
+          "widgets": [
+            "notebook:analiseDosDadosDATASUS.ipynb",
+            "notebook:CNN_Retinopatia_Diabetica.ipynb"
+          ]
+        },
+        "current": "notebook:analiseDosDadosDATASUS.ipynb"
+      },
+      "down": {
+        "size": 0,
+        "widgets": []
+      },
+      "left": {
+        "collapsed": false,
+        "visible": true,
+        "current": "filebrowser",
+        "widgets": [
+          "filebrowser",
+          "running-sessions",
+          "@jupyterlab/toc:plugin",
+          "extensionmanager.main-view"
+        ]
+      },
+      "right": {
+        "collapsed": true,
+        "visible": true,
+        "widgets": [
+          "jp-debugger-sidebar",
+          "jp-property-inspector"
+        ]
+      },
+      "relativeSizes": [0.2, 0.8, 0]
+    },
+    "notebook:analiseDosDadosDATASUS.ipynb": {
+      "data": {
+        "path": "analiseDosDadosDATASUS.ipynb",
+        "factory": "Notebook"
+      }
+    },
+    "notebook:CNN_Retinopatia_Diabetica.ipynb": {
+      "data": {
+        "path": "CNN_Retinopatia_Diabetica.ipynb",
+        "factory": "Notebook"
+      }
+    }
+  },
+  "metadata": {
+    "id": "/lab/workspaces/default"
+  }
+}
