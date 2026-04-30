@@ -25,8 +25,9 @@ RUN pip install --no-cache-dir \
     opencv-python-headless \
     tqdm
 
-# Pré-carrega workspace com os notebooks principais já abertos como abas
-COPY jupyter-workspace.json /root/.jupyter/lab/workspaces/default.jupyterlab-workspace
+# Pré-carrega workspace com os notebooks principais já abertos como abas.
+# Usa o import oficial do JupyterLab para garantir o naming/hash correto da pasta de workspaces.
+RUN jupyter lab workspaces import /workspace/jupyter-workspace.json --name=default
 
 # Expõe porta do Jupyter
 EXPOSE 8888
