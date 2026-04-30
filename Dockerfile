@@ -33,4 +33,5 @@ RUN jupyter lab workspaces import /workspace/jupyter-workspace.json --name=defau
 EXPOSE 8888
 
 # Inicia Jupyter Lab abrindo a workspace padrão (notebooks fixos como abas)
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--LabApp.default_url=/lab/workspaces/default"]
+# e desabilita o prompt de token/senha (uso local, sem autenticação).
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--ServerApp.token=", "--ServerApp.password=", "--LabApp.default_url=/lab/workspaces/default"]
