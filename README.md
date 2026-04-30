@@ -55,54 +55,61 @@ Assista à apresentação do projeto, metodologia e resultados:
 
 ## 🚀 Como Executar o Projeto
 
-Existem três caminhos. O **primeiro é o mais rápido** — basta `pull` e `up` da imagem pública, sem precisar instalar Python nem dependências localmente.
+Existem três caminhos. O **primeiro é o mais rápido** — basta `docker pull` + `docker run` da imagem pública, sem precisar nem clonar o repositório.
 
-### ✅ Cenário 1 — Imagem pública via Docker Compose (recomendado)
+### ✅ Cenário 1 — Imagem pública direto do GHCR (recomendado)
 
-A imagem é publicada automaticamente no **GitHub Container Registry (GHCR)** a cada push em `main`. O `docker-compose.yml` já está configurado para usá-la, e o container sobe com os notebooks principais já abertos como abas no Jupyter Lab.
+A imagem é publicada automaticamente no **GitHub Container Registry (GHCR)** a cada push em `main`. Os notebooks (`analiseDosDadosDATASUS.ipynb` e `CNN_Retinopatia_Diabetica.ipynb`) e o dataset (`data/dataSUS.csv`) já vão dentro da imagem, e o container sobe com os dois notebooks abertos como abas no Jupyter Lab.
+
+#### Pré-requisitos
+- Docker
+
+#### Passos
+1. Pull da imagem:
+   ```bash
+   docker pull ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
+   ```
+
+2. Suba o container:
+   ```bash
+   docker run -it --rm -p 8888:8888 ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
+   ```
+
+3. Acesse o Jupyter Lab em http://localhost:8888 (cole o token exibido no terminal, se solicitado). Os dois notebooks já vêm abertos como abas.
+
+4. Para parar: `Ctrl+C` no terminal.
+
+> Como a imagem é efêmera (sem volume mapeado), alterações feitas nos notebooks não são persistidas após o `docker stop`. Se quiser persistir mudanças, use o Cenário 2 (que monta o repositório como volume).
+
+---
+
+### 🛠️ Cenário 2 — Build local com Docker Compose
+
+Use este caminho se quiser modificar o `Dockerfile`/notebooks com persistência (o repositório fica montado como volume) ou rodar sem depender da imagem publicada.
 
 #### Pré-requisitos
 - Docker
 - Docker Compose
 
 #### Passos
-1. Clone o repositório (apenas para obter o `docker-compose.yml` e os notebooks):
+1. Clone o repositório:
    ```bash
    git clone https://github.com/Flamers-Team/flammers-techchallenge-fase01.git
    cd flammers-techchallenge-fase01
    ```
 
-2. Faça o pull da imagem pública:
+2. Build e subida do container:
    ```bash
-   docker compose pull
-   ```
-
-3. Suba o container:
-   ```bash
+   docker compose build
    docker compose up
    ```
 
-4. Acesse o Jupyter Lab em http://localhost:8888 (cole o token exibido no terminal, se solicitado). Os dois notebooks (`analiseDosDadosDATASUS.ipynb` e `CNN_Retinopatia_Diabetica.ipynb`) já vêm abertos como abas.
+3. Acesse o Jupyter Lab em http://localhost:8888. Diferente do Cenário 1, alterações nos notebooks ficam persistidas no seu sistema de arquivos local (volume `.:/workspace`).
 
-5. Para parar:
+4. Para parar:
    ```bash
    docker compose down
    ```
-
-> Os volumes do compose estão mapeados (`.:/workspace`), então qualquer alteração nos notebooks é persistida localmente.
-
----
-
-### 🛠️ Cenário 2 — Build local da imagem Docker
-
-Use este caminho se quiser modificar o `Dockerfile` ou rodar sem depender da imagem publicada.
-
-```bash
-docker compose build
-docker compose up
-```
-
-O resto do fluxo é idêntico ao Cenário 1.
 
 ---
 
@@ -148,7 +155,7 @@ Para quem prefere rodar sem Docker.
 
 ---
 
-## 🧠 Documentação da CNN — Retinopatia Diabética
+## 🧠 Atividade EXTRA - CNN  - Retinopatia Diabética
 
 Modelo de CNN para **detecção automática de retinopatia diabética**
 
