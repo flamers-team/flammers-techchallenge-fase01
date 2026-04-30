@@ -55,12 +55,66 @@ Assista à apresentação do projeto, metodologia e resultados:
 
 ## 🚀 Como Executar o Projeto
 
-### Pré-requisitos
+Existem três caminhos. O **primeiro é o mais rápido** — basta `pull` e `up` da imagem pública, sem precisar instalar Python nem dependências localmente.
+
+### ✅ Cenário 1 — Imagem pública via Docker Compose (recomendado)
+
+A imagem é publicada automaticamente no **GitHub Container Registry (GHCR)** a cada push em `main`. O `docker-compose.yml` já está configurado para usá-la, e o container sobe com os notebooks principais já abertos como abas no Jupyter Lab.
+
+#### Pré-requisitos
+- Docker
+- Docker Compose
+
+#### Passos
+1. Clone o repositório (apenas para obter o `docker-compose.yml` e os notebooks):
+   ```bash
+   git clone https://github.com/Flamers-Team/flammers-techchallenge-fase01.git
+   cd flammers-techchallenge-fase01
+   ```
+
+2. Faça o pull da imagem pública:
+   ```bash
+   docker compose pull
+   ```
+
+3. Suba o container:
+   ```bash
+   docker compose up
+   ```
+
+4. Acesse o Jupyter Lab em http://localhost:8888 (cole o token exibido no terminal, se solicitado). Os dois notebooks (`analiseDosDadosDATASUS.ipynb` e `CNN_Retinopatia_Diabetica.ipynb`) já vêm abertos como abas.
+
+5. Para parar:
+   ```bash
+   docker compose down
+   ```
+
+> Os volumes do compose estão mapeados (`.:/workspace`), então qualquer alteração nos notebooks é persistida localmente.
+
+---
+
+### 🛠️ Cenário 2 — Build local da imagem Docker
+
+Use este caminho se quiser modificar o `Dockerfile` ou rodar sem depender da imagem publicada.
+
+```bash
+docker compose build
+docker compose up
+```
+
+O resto do fluxo é idêntico ao Cenário 1.
+
+---
+
+### 🐍 Cenário 3 — Setup manual com Python local
+
+Para quem prefere rodar sem Docker.
+
+#### Pré-requisitos
 - Python 3.9+
 - Jupyter Notebook ou VS Code com extensão Jupyter
-- Bibliotecas Python (instaladas via pip ou conda)
 
-### Instalação e Setup
+#### Passos
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Flamers-Team/flammers-techchallenge-fase01.git
@@ -81,79 +135,16 @@ Assista à apresentação do projeto, metodologia e resultados:
    pip install -r requirements.txt
    ```
 
-### Executando os Notebooks
-
-#### 📊 Notebook Principal — Análise de Dados DataSUS
-Abra e execute o notebook principal:
-```bash
-jupyter notebook analiseDosDadosDATASUS.ipynb
-```
-
-- Este notebook contém todas as análises, preprocessamento, modelos e resultados.
-- Execute as células **sequencialmente** de cima para baixo.
-- Cada célula está documentada com explicações detalhadas do que está sendo feito.
-- O dataset utilizado está em [data/dataSUS.csv](data/dataSUS.csv).
-
-#### 🎁 Notebook Extra — CNN para Retinopatia Diabética
-Para a análise de Visão Computacional, execute:
-```bash
-jupyter notebook CNN_Retinopatia_Diabetica.ipynb
-```
-
-- Certifique-se de que o dataset de imagens foi extraído em `./data/diabetic_retinopathy/` (confira as instruções dentro do notebook).
-- Execute as células sequencialmente para treinar e avaliar os modelos de CNN
-
-### 🐳 Alternativa: Executar com Docker
-
-Se preferir uma abordagem containerizada, você pode usar Docker e Docker Compose para rodar todo o ambiente sem dependências locais.
-
-#### Pré-requisitos
-- Docker instalado
-- Docker Compose instalado
-
-#### Build e Execução
-1. Build da imagem:
+4. Execute os notebooks:
    ```bash
-   docker-compose build
+   jupyter notebook analiseDosDadosDATASUS.ipynb
+   # ou
+   jupyter notebook CNN_Retinopatia_Diabetica.ipynb
    ```
 
-2. Inicie o container:
-   ```bash
-   docker-compose up
-   ```
-
-3. Acesse o Jupyter Lab:
-   - Abra o navegador em: http://localhost:8888
-   - Copie o token exibido no terminal e cole na página de login, se solicitado.
-
-4. Dentro do Jupyter Lab, navegue até os notebooks:
-   - [analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb) — Notebook principal
-   - [CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb) — Notebook extra
-
-5. Para parar o container:
-   ```bash
-   docker-compose down
-   ```
-
-**Nota:** Os volumes estão mapeados, então qualquer alteração nos notebooks será persistida no seu sistema de arquivos local.
-
-#### 🐳 Usar imagem publicada do GitHub Container Registry (GHCR)
-
-A imagem Docker é automaticamente compilada e publicada no GitHub Container Registry por uma esteira CI/CD a cada push em `main`.
-
-**Pull da imagem:**
-```bash
-docker pull ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
-```
-
-**Rodar container direto:**
-```bash
-docker run -it -p 8888:8888 \
-  -v $(pwd):/workspace \
-  ghcr.io/flamers-team/flammers-techchallenge-fase01:latest
-```
-
-Então acesse http://localhost:8888 no navegador.
+- Execute as células **sequencialmente** de cima para baixo. Cada célula está documentada.
+- O dataset principal está em [data/dataSUS.csv](data/dataSUS.csv).
+- Para o notebook extra, certifique-se de que o dataset de imagens foi extraído em `./data/diabetic_retinopathy/` (instruções dentro do notebook).
 
 ---
 
