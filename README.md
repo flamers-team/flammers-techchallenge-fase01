@@ -1,5 +1,5 @@
 # 🏥 Sistema de Suporte ao Diagnóstico Cardiovascular
-## Tech Challenge Fase 1 — Atividade Extra: Visão Computacional
+## Tech Challenge Fase 1 — Pós-Tech IA para Desenvolvedores
 
 **Equipe:** # Flamers Team 🔥  
 **Instituição:** Hospital Universitário (Simulação)  
