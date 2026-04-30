@@ -1,8 +1,11 @@
-# 🏥 Sistema de Suporte ao Diagnóstico Cardiovascular - Tech Challenge Fase 1
+# 🏥 Sistema de Suporte ao Diagnóstico Cardiovascular
+## Tech Challenge Fase 1 — Atividade Extra: Visão Computacional
 
 **Equipe:** # Flamers Team 🔥  
 **Instituição:** Hospital Universitário (Simulação)  
 **Projeto:** IA para Triagem e Apoio à Decisão Médica em Doenças Circulatórias
+
+> 📄 **Desafio oficial:** [IADT - Fase 1 - Tech challenge B.pdf](IADT%20-%20Fase%201%20-%20Tech%20challenge%20B.pdf)
 
 ---
 
@@ -30,45 +33,7 @@ O sistema utiliza algoritmos de Machine Learning para prever a **necessidade de 
 
 ---
 
-## 📖 Dicionário de Dados 
-Para garantir a interpretabilidade clínica, detalhamos abaixo o significado de cada código:
-
-Fonte do dicionário de origem utilizado nas análises: [data/dataSUS.csv](data/dataSUS.csv).
-
-| Coluna | Descrição | Valores / Legenda |
-| :--- | :--- | :--- |
-| **SEXO** | Gênero do paciente | `1` = Masc. \| `3` = Fem. |
-| **IDADE** | Idade do paciente | `0` a `99` anos |
-| **RACA_COR** | Raça / Cor | `01` Branca \| `02` Preta \| `03` Parda \| `04` Amarela \| `05` Indígena |
-| **INSTRU** | Grau de Instrução | `0` Ignorado \| `1` Analfabeto \| `2` Fundamental \| `3` Médio \| `4` Superior |
-| **CAR_INT** | Caráter da Internação | `01` = Eletiva \| `02` = Urgência / Emergência |
-| **COMPLEX** | Complexidade | `02` = Média \| `03` = Alta |
-| **DIAS_PERM** | Permanência Geral | Tempo total de internação (dias) |
-| **UTI_MES_TO** | Permanência UTI | Dias em terapia intensiva |
-| **MARCA_UTI** | Tipo de UTI | `0` Não utilizou \| `74-75` Adulto (II/III) \| `99` Ignorado |
-| **DIAG_PRINC** | CID-10 Principal | Códigos "I" (Doenças Circulatórias) |
-| **PROC_REA** | Procedimento | Código de 10 dígitos (Tabela SIGTAP/SUS) |
-
----
-
-## 🔬 Estratégias de Pré-processamento
-1. **Seleção de Features:** Focamos em variáveis demográficas, administrativas e clínicas fundamentais.
-2. **Engenharia de Dados:**
-   - **Numerical Scaling:** Aplicamos `StandardScaler` em `IDADE` e `DIAS_PERM`.
-   - **Categorical Encoding:** `OneHotEncoder` para variáveis nominais e `LabelEncoder` para o CID-10 (`DIAG_PRINC`).
-3. **Qualidade:** Limpeza de registros e validação de integridade (100% preenchidos).
-
----
-
-## 🤖 Modelos Utilizados e Justificativa
-1. **Decision Tree:** Utilizada para análise inicial de interpretabilidade das regras de negócio.
-2. **Random Forest Classifier:** Modelo final escolhido pela sua robustez e capacidade de lidar com o volume de 1.2M de registros, oferecendo maior precisão na predição de casos críticos.
-
----
-
-## 📊 Resultados e Interpretação
-- **Métricas:** Avaliado via Matriz de Confusão e Curva ROC para minimizar Falsos Negativos.
-- **Insights:** O **Caráter de Internação (Urgência)** e a **Idade** mostraram-se os maiores preditores de necessidade de UTI no dataset analisado.
+> 📒 Todas as orientações detalhadas, dicionário de dados, estratégias de pré-processamento, modelos utilizados e resultados estão documentados diretamente no notebook principal: [analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb).
 
 ---
 
@@ -80,9 +45,13 @@ Fonte do dicionário de origem utilizado nas análises: [data/dataSUS.csv](data/
    git clone [https://github.com/Flamers-Team/FLAMERSTEAM.git](https://github.com/Flamers-Team/FLAMERSTEAM.git)
    
 
-# **Tech Challenge – FIAP IA for Devs | Parte EXTRA – Visão Computacional**
+---
+
+## 🎁 Entrega Extra — Visão Computacional
 
 # Detecção de Retinopatia Diabética com CNN
+
+Notebook da entrega extra: [CNN_Retinopatia_Diabetica.ipynb](CNN_Retinopatia_Diabetica.ipynb).
 
 Modelo de CNN para **detecção automática de retinopatia diabética** a partir de fotografias do fundo de olho (fundoscopia retiniana). O projeto treina e compara dois modelos: uma CNN construída do zero e Transfer Learning com EfficientNetB0.
 
