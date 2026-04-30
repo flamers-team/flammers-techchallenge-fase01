@@ -6,7 +6,7 @@
 
 > 📄 **Desafio oficial:** [IADT - Fase 1 - Tech challenge B.pdf](IADT%20-%20Fase%201%20-%20Tech%20challenge%20B.pdf)
 
-### 👥 Equipe — Flamers Team 🔥
+**👥 Equipe — Flamers Team 🔥**
 * **Flávio Oscar Hahn** - RM 374132
 * **Larissa Gomes do Vale Cabrerisso Machado** - RM 370911
 * **Michelle Almeida Nogueira Rodrigues** - RM 372291
