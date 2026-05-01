@@ -42,8 +42,10 @@ Modelo de CNN para detecção automática de **retinopatia diabética** com dois
 
 ## 📺 Demonstração em Vídeo
 Assista à apresentação do projeto, metodologia e resultados:
-👉 **[Assistir no YouTube](https://www.youtube.com/watch?v=6l4sF38SXOM)**
+👉 **[Assistir no YouTube]([https://www.youtube.com/watch?v=6l4sF38SXOM](https://www.youtube.com/watch?v=v3_wBq3AFfQ))**
 
+Assista à apresentação da parte EXTRA do projeto:
+👉 **[Assistir no YouTube]([youtube.com/watch?v=pkTrNNP03s4&feature=youtu.be))**
 ---
 
 > 📒 Todas as orientações detalhadas, dicionário de dados, estratégias de pré-processamento, modelos utilizados e resultados estão documentados diretamente no notebook principal: [analiseDosDadosDATASUS.ipynb](analiseDosDadosDATASUS.ipynb).
